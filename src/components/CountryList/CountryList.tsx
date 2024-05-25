@@ -16,26 +16,26 @@ export default function CountryList() {
             fetchData()
         } catch (error) {
             console.error("Ошибка:", error);
-        }finally {
+        } finally {
             setLoading(false);
         }
-       
+
     }, [])
     console.log("country = ", countries)
     if (loading) {
         return <h1>Загружается</h1>;
     }
-  return (
-    <Box>
-         <Typography variant="h3">Список стран</Typography>
-         <Box className={styles.CountryList}>
-       
-        {countries.map(country => (
-            <CountryCard country={country}/>
-        ))}
-        
-    </Box>
-    </Box>
-    
-  )
+    return (
+        <Box>
+            <Typography variant="h3">Список стран</Typography>
+            <Box className={styles.CountryList}>
+
+                {countries.map(country => (
+                    <CountryCard key={Math.random()} country={country} />
+                ))}
+
+            </Box>
+        </Box>
+
+    )
 }
