@@ -44,7 +44,7 @@ export default function CountryInfo() {
                 <Typography variant="h6" gutterBottom>Official Name: {details.name.official}</Typography>
                 <Box className={styles.info}>
                     <Box className={styles.infoItem}>
-                        <Typography variant="body1"><strong>Capital:</strong> {details.capital.join(', ')}</Typography>
+                        <Typography variant="body1"><strong>Capital:</strong> {details.capital}</Typography>
                     </Box>
                     <Box className={styles.infoItem}>
                         <Typography variant="body1"><strong>Region:</strong> {details.region}</Typography>
@@ -59,16 +59,16 @@ export default function CountryInfo() {
                         <Typography variant="body1"><strong>Area:</strong> {details.area.toLocaleString()} km²</Typography>
                     </Box>
                     <Box className={styles.infoItem}>
-                        <Typography variant="body1"><strong>Continent:</strong> {details.continents.join(', ')}</Typography>
+                        <Typography variant="body1"><strong>Continent:</strong> {details.continents}</Typography>
                     </Box>
                     {/* <Box className={styles.infoItem}>
                         <Typography variant="body1"><strong>Languages:</strong> {details.languages}</Typography>
                     </Box> */}
                     <Box className={styles.infoItem}>
-                        <Typography variant="body1"><strong>Currencies:</strong> {Object.keys(details.currencies).join(', ')}</Typography>
+                        <Typography variant="body1"><strong>Currencies:</strong> {Object.keys(details.currencies)}</Typography>
                     </Box>
                     <Box className={styles.infoItem}>
-                        <Typography variant="body1"><strong>Borders:</strong> {details.borders.join(', ')}</Typography>
+                        <Typography variant="body1"><strong>Borders:</strong> {details.borders}</Typography>
                     </Box>
                 </Box>
                 <Box className={styles.imageContainer}>
